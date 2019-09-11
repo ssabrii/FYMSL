@@ -11,14 +11,7 @@ env:
   - FRAMEWORK_NAME=FYMSL
   - PROJECT_NAME=FYMSL.xcodeproj
   - SCHEME = FYMSLSimple
-deploy:
-  provider: releases
-  api_key:
-    secure: QEbAvLQoDg9QUz06jr9tqef5LpUu6w2j65fGz25tIvFJ03AtcmeLBRu4XTMaMZg3L+ldYaI0APnYvQXU1B0mjw/644MfXQ0tmLsJgv6qPB87zq9DSSnT3al/U80+SNXLqzyXpRXKiK/colrXK+/chzKmntpyM+nhrrnFkWdGnrt2/x83hIJ0WifJMS2iVECWI2r4OO5eidEBS5OLW+J8ahzsjgFRIJLX22QTFOYeYpy+vhbDrSU+XzwlqAZadV6ALzrrftK35RnPTkE3ubU9S6aDbPEatYl3VTMFACq8bb/SZQoFiyNiutMvp75kSvUjfKqhkCpA4mvg5lGTzAsaPDM190RDo6M+oQq1q/MEi1cgrIGz4g6wUtTkAPDQ8uroLT+jdeJmEF4YyQeNhROB1Xz7s/t5qsVmF7ij95uMc8qCSVQZf6hD7dcaM1YhlYYdEmSY1P+0KOfBWhXBEJ33h6Lq488n+LzHezwJzCLskZ59rSFWLykBehM2rWkRSbVDB1tO5AqZvQx+y0ewH1pQhSZnHmyVCIeub5bsxS61u2oyboXdiMWnkocxq0V1USiVpmEquLUED998oTNpP4gRTTxiAjDIF6Sxe4dKg8XEY0KgoM0WejsAnUkSkJXz7+GcTefsudEhh1BYEP2jWMBoeWC6Fb4ls0NMx8he5WHxeGA=
-  file: FYMSL.framework.zip
-  on:
-    repo: ifgyong/FYMSL
-    tags: true
+
 script: xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple  -destination 'platform=iOS Simulator,OS=12.2,name=iPhone Xs' #-sdk iphonesimulator
        #xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple -destination platform\=iOS\ Simulator,OS\=12.2,name\=iPhone\ X build test
 # - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS'
