@@ -12,7 +12,7 @@ env:
   - PROJECT_NAME=FYMSL.xcodeproj
   - SCHEME = FYMSLSimple
 
-script: xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple  -destination 'platform=iOS Simulator,OS=12.2,name=iPhone Xs' #-sdk iphonesimulator
+script: xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple  -destination "platform=iOS Simulator,OS=12.2,name=iPhone Xs" -sdk iphonesimulator
 after_failure: xcrun simctl list
        #xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple -destination platform\=iOS\ Simulator,OS\=12.2,name\=iPhone\ X build test
 # - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS'
